@@ -17,6 +17,7 @@
 		4081160F1BA3F18F00F09294 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081160E1BA3F18F00F09294 /* Event.swift */; };
 		408116111BA3F20C00F09294 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408116101BA3F20C00F09294 /* Picture.swift */; };
 		408116131BA3F2CE00F09294 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408116121BA3F2CE00F09294 /* User.swift */; };
+		4934BA821BA3FE0300CB6509 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BA811BA3FE0300CB6509 /* Users.swift */; };
 		DFB6363C25F42C34995103ED /* libPods-Pik Pak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		4081160E1BA3F18F00F09294 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		408116101BA3F20C00F09294 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		408116121BA3F2CE00F09294 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4934BA811BA3FE0300CB6509 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pik Pak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7396170F7123C9AD65D771A7 /* Pods-Pik Pak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pik Pak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pik Pak/Pods-Pik Pak.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				4081160C1BA3F0F100F09294 /* Events.swift */,
+				4934BA811BA3FE0300CB6509 /* Users.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				4081160D1BA3F0F100F09294 /* Events.swift in Sources */,
 				408115E91BA3ECB100F09294 /* ViewController.swift in Sources */,
 				408115E71BA3ECB100F09294 /* AppDelegate.swift in Sources */,
+				4934BA821BA3FE0300CB6509 /* Users.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,19 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 struct Event {
     var id: String
     var name: String
     var location: CLLocation
-    var cover: Picture
+    //var cover: UIImage
+    
+    init()
+    {
+        id = ""
+        name = ""
+        location = CLLocation()
+        //cover = UIImage()
+    }
 }

@@ -8,11 +8,19 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Users.getUserInfo()
+        var event: Event = Event()
+        event.name = "MHacks"
+        //event.cover = UIImage()
+        event.location = CLLocation(latitude: 20, longitude: 10)
+        Events.createEvent(event)
+        //Events.getEvent("");
         // Do any additional setup after loading the view, typically from a nib.
     }
 
