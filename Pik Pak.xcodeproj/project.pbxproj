@@ -19,6 +19,14 @@
 		408116131BA3F2CE00F09294 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408116121BA3F2CE00F09294 /* User.swift */; };
 		4934BA821BA3FE0300CB6509 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BA811BA3FE0300CB6509 /* Users.swift */; };
 		DFB6363C25F42C34995103ED /* libPods-Pik Pak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */; };
+		EE2D26E71BA40A7E00DFEE92 /* InspirationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26E61BA40A7E00DFEE92 /* InspirationsViewController.swift */; };
+		EE2D26E91BA40AF700DFEE92 /* Inspiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26E81BA40AF700DFEE92 /* Inspiration.swift */; };
+		EE2D26EB1BA40B2E00DFEE92 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26EA1BA40B2E00DFEE92 /* UIColor+Palette.swift */; };
+		EE2D26ED1BA40B4E00DFEE92 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26EC1BA40B4E00DFEE92 /* Session.swift */; };
+		EE2D26EF1BA40B5F00DFEE92 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26EE1BA40B5F00DFEE92 /* UIImage+Decompression.swift */; };
+		EE2D26F11BA40C5500DFEE92 /* InspirationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26F01BA40C5500DFEE92 /* InspirationCell.swift */; };
+		EE2D26F31BA40E1600DFEE92 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2D26F21BA40E1600DFEE92 /* Inspirations.xcassets */; };
+		EE2D26F51BA4100500DFEE92 /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE2D26F41BA4100500DFEE92 /* Inspirations.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +58,14 @@
 		4934BA811BA3FE0300CB6509 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pik Pak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7396170F7123C9AD65D771A7 /* Pods-Pik Pak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pik Pak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pik Pak/Pods-Pik Pak.debug.xcconfig"; sourceTree = "<group>"; };
+		EE2D26E61BA40A7E00DFEE92 /* InspirationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationsViewController.swift; sourceTree = "<group>"; };
+		EE2D26E81BA40AF700DFEE92 /* Inspiration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspiration.swift; sourceTree = "<group>"; };
+		EE2D26EA1BA40B2E00DFEE92 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		EE2D26EC1BA40B4E00DFEE92 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		EE2D26EE1BA40B5F00DFEE92 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
+		EE2D26F01BA40C5500DFEE92 /* InspirationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCell.swift; sourceTree = "<group>"; };
+		EE2D26F21BA40E1600DFEE92 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
+		EE2D26F41BA4100500DFEE92 /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +128,17 @@
 			isa = PBXGroup;
 			children = (
 				408116061BA3F06E00F09294 /* Source */,
+				EE2D26F01BA40C5500DFEE92 /* InspirationCell.swift */,
+				EE2D26EE1BA40B5F00DFEE92 /* UIImage+Decompression.swift */,
+				EE2D26EA1BA40B2E00DFEE92 /* UIColor+Palette.swift */,
+				EE2D26EC1BA40B4E00DFEE92 /* Session.swift */,
+				EE2D26F41BA4100500DFEE92 /* Inspirations.plist */,
 				408115E61BA3ECB100F09294 /* AppDelegate.swift */,
 				408115E81BA3ECB100F09294 /* ViewController.swift */,
 				408115EA1BA3ECB100F09294 /* Main.storyboard */,
+				EE2D26E81BA40AF700DFEE92 /* Inspiration.swift */,
+				EE2D26F21BA40E1600DFEE92 /* Inspirations.xcassets */,
+				EE2D26E61BA40A7E00DFEE92 /* InspirationsViewController.swift */,
 				408115ED1BA3ECB100F09294 /* Images.xcassets */,
 				408115EF1BA3ECB100F09294 /* LaunchScreen.xib */,
 				408115E41BA3ECB100F09294 /* Supporting Files */,
@@ -257,6 +281,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE2D26F51BA4100500DFEE92 /* Inspirations.plist in Resources */,
+				EE2D26F31BA40E1600DFEE92 /* Inspirations.xcassets in Resources */,
 				408115EC1BA3ECB100F09294 /* Main.storyboard in Resources */,
 				408115F11BA3ECB100F09294 /* LaunchScreen.xib in Resources */,
 				408115EE1BA3ECB100F09294 /* Images.xcassets in Resources */,
@@ -314,9 +340,15 @@
 				408116111BA3F20C00F09294 /* Picture.swift in Sources */,
 				408116131BA3F2CE00F09294 /* User.swift in Sources */,
 				4081160D1BA3F0F100F09294 /* Events.swift in Sources */,
+				EE2D26F11BA40C5500DFEE92 /* InspirationCell.swift in Sources */,
+				EE2D26E91BA40AF700DFEE92 /* Inspiration.swift in Sources */,
+				EE2D26E71BA40A7E00DFEE92 /* InspirationsViewController.swift in Sources */,
+				EE2D26ED1BA40B4E00DFEE92 /* Session.swift in Sources */,
 				408115E91BA3ECB100F09294 /* ViewController.swift in Sources */,
 				408115E71BA3ECB100F09294 /* AppDelegate.swift in Sources */,
 				4934BA821BA3FE0300CB6509 /* Users.swift in Sources */,
+				EE2D26EB1BA40B2E00DFEE92 /* UIColor+Palette.swift in Sources */,
+				EE2D26EF1BA40B5F00DFEE92 /* UIImage+Decompression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
