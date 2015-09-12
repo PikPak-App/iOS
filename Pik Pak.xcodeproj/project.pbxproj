@@ -17,6 +17,7 @@
 		4081160F1BA3F18F00F09294 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081160E1BA3F18F00F09294 /* Event.swift */; };
 		408116111BA3F20C00F09294 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408116101BA3F20C00F09294 /* Picture.swift */; };
 		408116131BA3F2CE00F09294 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408116121BA3F2CE00F09294 /* User.swift */; };
+		DFB6363C25F42C34995103ED /* libPods-Pik Pak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C7C60AB528999CD87A12F4B /* Pods-Pik Pak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pik Pak.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pik Pak/Pods-Pik Pak.release.xcconfig"; sourceTree = "<group>"; };
 		408115E11BA3ECB100F09294 /* Pik Pak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pik Pak.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		408115E51BA3ECB100F09294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408115E61BA3ECB100F09294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,8 @@
 		4081160E1BA3F18F00F09294 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		408116101BA3F20C00F09294 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		408116121BA3F2CE00F09294 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pik Pak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7396170F7123C9AD65D771A7 /* Pods-Pik Pak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pik Pak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pik Pak/Pods-Pik Pak.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFB6363C25F42C34995103ED /* libPods-Pik Pak.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +69,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B5B96EA4B9C5CCC90E97A4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CAEED3D1FE777A166D44561 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7396170F7123C9AD65D771A7 /* Pods-Pik Pak.debug.xcconfig */,
+				3C7C60AB528999CD87A12F4B /* Pods-Pik Pak.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		408115D81BA3ECB100F09294 = {
 			isa = PBXGroup;
 			children = (
 				408115E31BA3ECB100F09294 /* Pik Pak */,
 				408115F91BA3ECB100F09294 /* Pik PakTests */,
 				408115E21BA3ECB100F09294 /* Products */,
+				2CAEED3D1FE777A166D44561 /* Pods */,
+				1B5B96EA4B9C5CCC90E97A4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 408116001BA3ECB100F09294 /* Build configuration list for PBXNativeTarget "Pik Pak" */;
 			buildPhases = (
+				30AAE51902C422201ADA5B91 /* Check Pods Manifest.lock */,
 				408115DD1BA3ECB100F09294 /* Sources */,
 				408115DE1BA3ECB100F09294 /* Frameworks */,
 				408115DF1BA3ECB100F09294 /* Resources */,
+				9EAB8D1DB56EBD8A188B6514 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +268,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30AAE51902C422201ADA5B91 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9EAB8D1DB56EBD8A188B6514 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pik Pak/Pods-Pik Pak-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		408115DD1BA3ECB100F09294 /* Sources */ = {
@@ -378,6 +437,7 @@
 		};
 		408116011BA3ECB100F09294 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7396170F7123C9AD65D771A7 /* Pods-Pik Pak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pik Pak/Info.plist";
@@ -388,6 +448,7 @@
 		};
 		408116021BA3ECB100F09294 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C7C60AB528999CD87A12F4B /* Pods-Pik Pak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pik Pak/Info.plist";
@@ -449,6 +510,7 @@
 				408116021BA3ECB100F09294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		408116031BA3ECB100F09294 /* Build configuration list for PBXNativeTarget "Pik PakTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +519,7 @@
 				408116051BA3ECB100F09294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
