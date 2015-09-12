@@ -19,6 +19,8 @@ class InspirationCell: UICollectionViewCell {
         imageView.image = inspiration.backgroundImage
       }
     }
+    
+    
   }
   
 }
