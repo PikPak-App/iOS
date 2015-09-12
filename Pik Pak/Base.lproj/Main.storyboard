@@ -31,21 +31,52 @@
                                             <rect key="frame" x="8" y="8" width="184" height="184"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRb-7c-xk6">
+                                            <rect key="frame" x="1" y="8" width="197" height="184"/>
+                                            <state key="normal">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjN-xt-zOn">
+                                            <rect key="frame" x="8" y="76" width="192" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="4so-HP-BPN"/>
+                                                <constraint firstAttribute="height" constant="48" id="El2-Xc-lZo"/>
+                                                <constraint firstAttribute="width" constant="200" id="LqB-lK-Qrb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="4so-HP-BPN"/>
+                                                    <exclude reference="LqB-lK-Qrb"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="hjN-xt-zOn" firstAttribute="top" secondItem="5Fz-eh-9cI" secondAttribute="top" constant="76" id="0m6-x3-Y7w"/>
                                     <constraint firstItem="OLj-k6-R9c" firstAttribute="leading" secondItem="5Fz-eh-9cI" secondAttribute="leadingMargin" id="2gw-7U-mph"/>
                                     <constraint firstItem="kXP-UG-KTL" firstAttribute="top" secondItem="5Fz-eh-9cI" secondAttribute="topMargin" id="3S4-RA-Qk8"/>
                                     <constraint firstAttribute="bottom" secondItem="OLj-k6-R9c" secondAttribute="bottom" id="5cv-nA-a3K"/>
+                                    <constraint firstAttribute="centerY" secondItem="hjN-xt-zOn" secondAttribute="centerY" id="5zs-vd-5Mq"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="hjN-xt-zOn" secondAttribute="trailing" id="6IP-SU-Rcs"/>
                                     <constraint firstItem="kXP-UG-KTL" firstAttribute="trailing" secondItem="5Fz-eh-9cI" secondAttribute="trailingMargin" id="7JK-BF-RCb"/>
                                     <constraint firstItem="OLj-k6-R9c" firstAttribute="top" secondItem="5Fz-eh-9cI" secondAttribute="top" id="9DB-bI-1eM"/>
                                     <constraint firstAttribute="centerY" secondItem="OLj-k6-R9c" secondAttribute="centerY" id="CPy-1h-yYY"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="OLj-k6-R9c" secondAttribute="trailing" id="K3Y-bp-XH0"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="kXP-UG-KTL" secondAttribute="bottom" id="PVx-CM-UlW"/>
+                                    <constraint firstItem="hjN-xt-zOn" firstAttribute="leading" secondItem="5Fz-eh-9cI" secondAttribute="leadingMargin" id="Pi3-kb-fW4"/>
+                                    <constraint firstAttribute="bottom" secondItem="hjN-xt-zOn" secondAttribute="bottom" constant="76" id="TcY-5n-HCW"/>
                                     <constraint firstItem="kXP-UG-KTL" firstAttribute="leading" secondItem="5Fz-eh-9cI" secondAttribute="leadingMargin" id="USB-w0-8uG"/>
                                     <constraint firstAttribute="centerY" secondItem="OLj-k6-R9c" secondAttribute="centerY" id="bV8-9i-y6b"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="kXP-UG-KTL" secondAttribute="trailing" id="eLz-Dk-EoK"/>
+                                    <constraint firstItem="hjN-xt-zOn" firstAttribute="leading" secondItem="5Fz-eh-9cI" secondAttribute="leading" id="fDY-d4-xYS"/>
+                                    <constraint firstAttribute="trailing" secondItem="hjN-xt-zOn" secondAttribute="trailing" id="mlU-CE-HsF"/>
                                     <constraint firstItem="kXP-UG-KTL" firstAttribute="leading" secondItem="5Fz-eh-9cI" secondAttribute="leadingMargin" id="pQH-YW-ULQ"/>
                                     <constraint firstItem="kXP-UG-KTL" firstAttribute="top" secondItem="5Fz-eh-9cI" secondAttribute="topMargin" id="qAe-jq-sab"/>
                                 </constraints>
@@ -55,10 +86,16 @@
                                         <exclude reference="5cv-nA-a3K"/>
                                         <exclude reference="9DB-bI-1eM"/>
                                         <exclude reference="bV8-9i-y6b"/>
+                                        <exclude reference="0m6-x3-Y7w"/>
+                                        <exclude reference="6IP-SU-Rcs"/>
+                                        <exclude reference="TcY-5n-HCW"/>
+                                        <exclude reference="fDY-d4-xYS"/>
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <outlet property="imageCoverView" destination="kXP-UG-KTL" id="61B-Wn-94h"/>
                                     <outlet property="imageView" destination="OLj-k6-R9c" id="hqw-zW-oYk"/>
+                                    <outlet property="titleLabel" destination="hjN-xt-zOn" id="oeI-oU-y0H"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
