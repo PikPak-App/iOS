@@ -6,7 +6,8 @@
 import UIKit
 
 class InspirationsViewController: UICollectionViewController {
-  
+   
+    
   let inspirations = Inspiration.allInspirations()
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
