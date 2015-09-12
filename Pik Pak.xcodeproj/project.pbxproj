@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		408115E71BA3ECB100F09294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408115E61BA3ECB100F09294 /* AppDelegate.swift */; };
+		408115E91BA3ECB100F09294 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408115E81BA3ECB100F09294 /* ViewController.swift */; };
+		408115EC1BA3ECB100F09294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408115EA1BA3ECB100F09294 /* Main.storyboard */; };
+		408115EE1BA3ECB100F09294 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408115ED1BA3ECB100F09294 /* Images.xcassets */; };
+		408115F11BA3ECB100F09294 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408115EF1BA3ECB100F09294 /* LaunchScreen.xib */; };
+		408115FD1BA3ECB100F09294 /* Pik_PakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408115FC1BA3ECB100F09294 /* Pik_PakTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		408115F71BA3ECB100F09294 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 408115D91BA3ECB100F09294 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 408115E01BA3ECB100F09294;
+			remoteInfo = "Pik Pak";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		408115E11BA3ECB100F09294 /* Pik Pak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pik Pak.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		408115E51BA3ECB100F09294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408115E61BA3ECB100F09294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		408115E81BA3ECB100F09294 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		408115EB1BA3ECB100F09294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		408115ED1BA3ECB100F09294 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		408115F01BA3ECB100F09294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		408115F61BA3ECB100F09294 /* Pik PakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pik PakTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		408115FB1BA3ECB100F09294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408115FC1BA3ECB100F09294 /* Pik_PakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pik_PakTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		408115DE1BA3ECB100F09294 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408115F31BA3ECB100F09294 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		408115D81BA3ECB100F09294 = {
+			isa = PBXGroup;
+			children = (
+				408115E31BA3ECB100F09294 /* Pik Pak */,
+				408115F91BA3ECB100F09294 /* Pik PakTests */,
+				408115E21BA3ECB100F09294 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		408115E21BA3ECB100F09294 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				408115E11BA3ECB100F09294 /* Pik Pak.app */,
+				408115F61BA3ECB100F09294 /* Pik PakTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		408115E31BA3ECB100F09294 /* Pik Pak */ = {
+			isa = PBXGroup;
+			children = (
+				408115E61BA3ECB100F09294 /* AppDelegate.swift */,
+				408115E81BA3ECB100F09294 /* ViewController.swift */,
+				408115EA1BA3ECB100F09294 /* Main.storyboard */,
+				408115ED1BA3ECB100F09294 /* Images.xcassets */,
+				408115EF1BA3ECB100F09294 /* LaunchScreen.xib */,
+				408115E41BA3ECB100F09294 /* Supporting Files */,
+			);
+			path = "Pik Pak";
+			sourceTree = "<group>";
+		};
+		408115E41BA3ECB100F09294 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				408115E51BA3ECB100F09294 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		408115F91BA3ECB100F09294 /* Pik PakTests */ = {
+			isa = PBXGroup;
+			children = (
+				408115FC1BA3ECB100F09294 /* Pik_PakTests.swift */,
+				408115FA1BA3ECB100F09294 /* Supporting Files */,
+			);
+			path = "Pik PakTests";
+			sourceTree = "<group>";
+		};
+		408115FA1BA3ECB100F09294 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				408115FB1BA3ECB100F09294 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		408115E01BA3ECB100F09294 /* Pik Pak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 408116001BA3ECB100F09294 /* Build configuration list for PBXNativeTarget "Pik Pak" */;
+			buildPhases = (
+				408115DD1BA3ECB100F09294 /* Sources */,
+				408115DE1BA3ECB100F09294 /* Frameworks */,
+				408115DF1BA3ECB100F09294 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pik Pak";
+			productName = "Pik Pak";
+			productReference = 408115E11BA3ECB100F09294 /* Pik Pak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		408115F51BA3ECB100F09294 /* Pik PakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 408116031BA3ECB100F09294 /* Build configuration list for PBXNativeTarget "Pik PakTests" */;
+			buildPhases = (
+				408115F21BA3ECB100F09294 /* Sources */,
+				408115F31BA3ECB100F09294 /* Frameworks */,
+				408115F41BA3ECB100F09294 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				408115F81BA3ECB100F09294 /* PBXTargetDependency */,
+			);
+			name = "Pik PakTests";
+			productName = "Pik PakTests";
+			productReference = 408115F61BA3ECB100F09294 /* Pik PakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		408115D91BA3ECB100F09294 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Pik Pak";
+				TargetAttributes = {
+					408115E01BA3ECB100F09294 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					408115F51BA3ECB100F09294 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 408115E01BA3ECB100F09294;
+					};
+				};
+			};
+			buildConfigurationList = 408115DC1BA3ECB100F09294 /* Build configuration list for PBXProject "Pik Pak" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 408115D81BA3ECB100F09294;
+			productRefGroup = 408115E21BA3ECB100F09294 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				408115E01BA3ECB100F09294 /* Pik Pak */,
+				408115F51BA3ECB100F09294 /* Pik PakTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		408115DF1BA3ECB100F09294 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408115EC1BA3ECB100F09294 /* Main.storyboard in Resources */,
+				408115F11BA3ECB100F09294 /* LaunchScreen.xib in Resources */,
+				408115EE1BA3ECB100F09294 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408115F41BA3ECB100F09294 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		408115DD1BA3ECB100F09294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408115E91BA3ECB100F09294 /* ViewController.swift in Sources */,
+				408115E71BA3ECB100F09294 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408115F21BA3ECB100F09294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408115FD1BA3ECB100F09294 /* Pik_PakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		408115F81BA3ECB100F09294 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 408115E01BA3ECB100F09294 /* Pik Pak */;
+			targetProxy = 408115F71BA3ECB100F09294 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		408115EA1BA3ECB100F09294 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				408115EB1BA3ECB100F09294 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		408115EF1BA3ECB100F09294 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				408115F01BA3ECB100F09294 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		408115FE1BA3ECB100F09294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		408115FF1BA3ECB100F09294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		408116011BA3ECB100F09294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pik Pak/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		408116021BA3ECB100F09294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pik Pak/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		408116041BA3ECB100F09294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Pik PakTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pik Pak.app/Pik Pak";
+			};
+			name = Debug;
+		};
+		408116051BA3ECB100F09294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Pik PakTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pik Pak.app/Pik Pak";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		408115DC1BA3ECB100F09294 /* Build configuration list for PBXProject "Pik Pak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408115FE1BA3ECB100F09294 /* Debug */,
+				408115FF1BA3ECB100F09294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		408116001BA3ECB100F09294 /* Build configuration list for PBXNativeTarget "Pik Pak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408116011BA3ECB100F09294 /* Debug */,
+				408116021BA3ECB100F09294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		408116031BA3ECB100F09294 /* Build configuration list for PBXNativeTarget "Pik PakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408116041BA3ECB100F09294 /* Debug */,
+				408116051BA3ECB100F09294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 408115D91BA3ECB100F09294 /* Project object */;
+}
