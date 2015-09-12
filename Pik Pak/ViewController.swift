@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         //event.cover = UIImage()
         event.location = CLLocation(latitude: 20, longitude: 10)
         Events.createEvent(event)
+        Events.getEvent("-Jz-mV0UF8bDd5wSF0P-")
         //Events.getEvent("");
         // Do any additional setup after loading the view, typically from a nib.
     }
