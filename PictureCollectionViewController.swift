@@ -9,6 +9,10 @@
 import UIKit
 
 class PictureCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+    @IBAction func ThumbsUp(sender: AnyObject) {
+        
+        
+    }
 
     var imagesArray = [String]()
     

@@ -14,13 +14,14 @@ struct Event {
     var id: String
     var name: String
     var location: CLLocation
-    //var cover: UIImage
+    var cover: UIImage!
+    var owner: String
     
     init()
     {
         id = ""
         name = ""
+        owner = UIDevice.currentDevice().identifierForVendor.UUIDString
         location = CLLocation()
-        //cover = UIImage()
     }
 }

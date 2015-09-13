@@ -12,11 +12,12 @@
 		408115EC1BA3ECB100F09294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408115EA1BA3ECB100F09294 /* Main.storyboard */; };
 		408115F11BA3ECB100F09294 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408115EF1BA3ECB100F09294 /* LaunchScreen.xib */; };
 		408115FD1BA3ECB100F09294 /* Pik_PakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408115FC1BA3ECB100F09294 /* Pik_PakTests.swift */; };
-		4081160D1BA3F0F100F09294 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081160C1BA3F0F100F09294 /* Events.swift */; };
-		4081160F1BA3F18F00F09294 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081160E1BA3F18F00F09294 /* Event.swift */; };
-		408116111BA3F20C00F09294 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408116101BA3F20C00F09294 /* Picture.swift */; };
-		408116131BA3F2CE00F09294 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408116121BA3F2CE00F09294 /* User.swift */; };
-		4934BA821BA3FE0300CB6509 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4934BA811BA3FE0300CB6509 /* Users.swift */; };
+		49F166DD1BA54CDA005CDC76 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166DA1BA54CDA005CDC76 /* Event.swift */; };
+		49F166DE1BA54CDA005CDC76 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166DB1BA54CDA005CDC76 /* Picture.swift */; };
+		49F166DF1BA54CDA005CDC76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166DC1BA54CDA005CDC76 /* User.swift */; };
+		49F166E11BA54CF0005CDC76 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166E01BA54CF0005CDC76 /* Events.swift */; };
+		49F166E41BA54CFA005CDC76 /* Pictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166E21BA54CFA005CDC76 /* Pictures.swift */; };
+		49F166E51BA54CFA005CDC76 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166E31BA54CFA005CDC76 /* Users.swift */; };
 		DFB6363C25F42C34995103ED /* libPods-Pik Pak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */; };
 		EE2D26E71BA40A7E00DFEE92 /* InspirationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26E61BA40A7E00DFEE92 /* InspirationsViewController.swift */; };
 		EE2D26E91BA40AF700DFEE92 /* Inspiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26E81BA40AF700DFEE92 /* Inspiration.swift */; };
@@ -53,11 +54,12 @@
 		408115F61BA3ECB100F09294 /* Pik PakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pik PakTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		408115FB1BA3ECB100F09294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408115FC1BA3ECB100F09294 /* Pik_PakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pik_PakTests.swift; sourceTree = "<group>"; };
-		4081160C1BA3F0F100F09294 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
-		4081160E1BA3F18F00F09294 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		408116101BA3F20C00F09294 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
-		408116121BA3F2CE00F09294 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4934BA811BA3FE0300CB6509 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		49F166DA1BA54CDA005CDC76 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		49F166DB1BA54CDA005CDC76 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		49F166DC1BA54CDA005CDC76 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		49F166E01BA54CF0005CDC76 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		49F166E21BA54CFA005CDC76 /* Pictures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pictures.swift; sourceTree = "<group>"; };
+		49F166E31BA54CFA005CDC76 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pik Pak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7396170F7123C9AD65D771A7 /* Pods-Pik Pak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pik Pak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pik Pak/Pods-Pik Pak.debug.xcconfig"; sourceTree = "<group>"; };
 		EE2D26E61BA40A7E00DFEE92 /* InspirationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationsViewController.swift; sourceTree = "<group>"; };
@@ -192,9 +194,9 @@
 		408116141BA3F42500F09294 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				408116121BA3F2CE00F09294 /* User.swift */,
-				4081160E1BA3F18F00F09294 /* Event.swift */,
-				408116101BA3F20C00F09294 /* Picture.swift */,
+				49F166DA1BA54CDA005CDC76 /* Event.swift */,
+				49F166DB1BA54CDA005CDC76 /* Picture.swift */,
+				49F166DC1BA54CDA005CDC76 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -202,8 +204,9 @@
 		408116151BA3F43400F09294 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				4081160C1BA3F0F100F09294 /* Events.swift */,
-				4934BA811BA3FE0300CB6509 /* Users.swift */,
+				49F166E21BA54CFA005CDC76 /* Pictures.swift */,
+				49F166E31BA54CFA005CDC76 /* Users.swift */,
+				49F166E01BA54CF0005CDC76 /* Events.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -345,20 +348,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4081160F1BA3F18F00F09294 /* Event.swift in Sources */,
-				408116111BA3F20C00F09294 /* Picture.swift in Sources */,
-				408116131BA3F2CE00F09294 /* User.swift in Sources */,
-				4081160D1BA3F0F100F09294 /* Events.swift in Sources */,
 				EE2D26F11BA40C5500DFEE92 /* InspirationCell.swift in Sources */,
 				EE2D26E91BA40AF700DFEE92 /* Inspiration.swift in Sources */,
 				EE2D26E71BA40A7E00DFEE92 /* InspirationsViewController.swift in Sources */,
 				EE8E655C1BA4E56A004219CE /* PictureCollectionViewController.swift in Sources */,
+				49F166DD1BA54CDA005CDC76 /* Event.swift in Sources */,
 				EE8E65561BA4A7E5004219CE /* CustomCell.swift in Sources */,
+				49F166DF1BA54CDA005CDC76 /* User.swift in Sources */,
 				EE2D26ED1BA40B4E00DFEE92 /* Session.swift in Sources */,
+				49F166E41BA54CFA005CDC76 /* Pictures.swift in Sources */,
+				49F166E51BA54CFA005CDC76 /* Users.swift in Sources */,
 				408115E91BA3ECB100F09294 /* ViewController.swift in Sources */,
+				49F166E11BA54CF0005CDC76 /* Events.swift in Sources */,
 				408115E71BA3ECB100F09294 /* AppDelegate.swift in Sources */,
-				4934BA821BA3FE0300CB6509 /* Users.swift in Sources */,
 				EE2D26F71BA4126C00DFEE92 /* UltravisualLayout.swift in Sources */,
+				49F166DE1BA54CDA005CDC76 /* Picture.swift in Sources */,
 				EE2D26EB1BA40B2E00DFEE92 /* UIColor+Palette.swift in Sources */,
 				EE2D26EF1BA40B5F00DFEE92 /* UIImage+Decompression.swift in Sources */,
 			);

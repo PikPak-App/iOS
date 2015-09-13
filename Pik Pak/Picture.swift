@@ -9,6 +9,14 @@
 import Foundation
 
 struct Picture {
-    var author: User
-    var url: NSURL
+    var id: String
+    var score: Int
+    var image: UIImage!
+    
+    init()
+    {
+        id = ""
+        score = 0
+        image = nil
+    }
 }
