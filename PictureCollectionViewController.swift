@@ -8,18 +8,45 @@
 
 import UIKit
 
-class PictureCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class PictureCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     @IBAction func ThumbsUp(sender: AnyObject) {
-        
         
     }
 
-    var imagesArray = [String]()
+
+    
+    let imagePicker = UIImagePickerController()
+    var eventID: String = ""
+    //This is always null, so it always gets and sends null pictures for every event!
+    var pictures: [Picture] = [Picture]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imagesArray = ["Dom", "ivan", "zack"]
+        imagePicker.delegate = self
+        imagePicker.sourceType = .PhotoLibrary
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receiveNotif:", name: "EventChangeNotif", object: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    func receiveNotif(notification:NSNotification)
+    {
+        println("Notification received")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        Events.getEvent(eventID, withBlock: { event in
+            println("event title" + event.name)
+        })
+        Events.picturesForEvent(eventID, withBlock: { (pics) -> () in
+            self.pictures = pics
+            self.collectionView!.reloadData()
+        })
+        //eventID = NSUserDefaults.standardUserDefaults().objectForKey("currentEvent") as! String
+        //NSUserDefaults.standardUserDefaults().removeObjectForKey("currentEvent")
+        //NSUserDefaults.standardUserDefaults().synchronize()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,22 +54,30 @@ class PictureCollectionViewController: UICollectionViewController, UICollectionV
         // Dispose of any resources that can be recreated.
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            println("current event id " + eventID)
+            Pictures.sendPictureToEvent(pickedImage, eventID: eventID)
+            imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
         
         var imageView = cell.viewWithTag(1) as! UIImageView
-        imageView.image = UIImage(named: imagesArray[indexPath.row])
-        
-        
-        
+        imageView.image = pictures[indexPath.row].image
         
         return cell
-        
-        
+
+    }
+    
+    @IBAction func captureImageBtn(sender: AnyObject) {
+        self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-    return imagesArray.count
+        return pictures.count;
     }
     }
 

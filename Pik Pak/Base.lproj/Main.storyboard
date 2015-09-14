@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Inspirations View Controller-->
+        <!--Loading...-->
         <scene sceneID="DZ4-PA-kuf">
             <objects>
                 <viewController id="QWH-bt-DCo" customClass="InspirationsViewController" customModule="Pik_Pak" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                                                 <color key="titleShadowColor" red="0.13333334028720856" green="0.058823533356189728" blue="0.031372550874948502" alpha="1" colorSpace="deviceRGB"/>
                                             </state>
                                             <connections>
-                                                <segue destination="Fem-cp-AVX" kind="push" id="0DU-qT-t1J"/>
+                                                <segue destination="Fem-cp-AVX" kind="push" identifier="pushToPictureCollection" id="0DU-qT-t1J"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjN-xt-zOn">
@@ -116,10 +116,11 @@
                             <outlet property="delegate" destination="QWH-bt-DCo" id="cDk-D3-7lc"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Jyo-eX-WRU"/>
+                    <navigationItem key="navigationItem" title="Loading..." id="Jyo-eX-WRU"/>
                     <connections>
                         <outlet property="CollectionView" destination="UD7-gg-Cbk" id="i4s-eI-fcY"/>
                         <outlet property="collectionView" destination="UD7-gg-Cbk" id="qXd-dA-bcU"/>
+                        <outlet property="navBar" destination="Jyo-eX-WRU" id="EFn-93-blY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MK-x1-zaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,14 +155,14 @@
                                                 <constraint firstAttribute="width" secondItem="zjz-Ea-8Zm" secondAttribute="height" multiplier="3:2" id="QTW-Gw-7hU"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumpsdownBlack'" highlightedImage="thumpsdownred" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ne8-CW-7tR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumpsdownBlack'" highlightedImage="thumpsdownBlack'" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ne8-CW-7tR">
                                             <rect key="frame" x="150" y="405" width="160" height="205"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thuumsblack" highlightedImage="thuumsblack" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxE-6h-0em">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thuumsblack" highlightedImage="thumps" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxE-6h-0em">
                                             <rect key="frame" x="54" y="377" width="198" height="218"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKf-lI-bbC">
-                                            <rect key="frame" x="118" y="417" width="79" height="110"/>
+                                            <rect key="frame" x="66" y="409" width="79" height="110"/>
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -187,7 +188,13 @@
                             <outlet property="delegate" destination="Fem-cp-AVX" id="dca-pg-gC0"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="hqX-Hb-978"/>
+                    <navigationItem key="navigationItem" id="hqX-Hb-978">
+                        <barButtonItem key="rightBarButtonItem" title="Capture Image" id="hQw-l8-IWf">
+                            <connections>
+                                <action selector="captureImageBtn:" destination="Fem-cp-AVX" id="RJa-h0-rZj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ad-cH-4bH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,27 +215,34 @@
                     <connections>
                         <segue destination="LyY-Y3-2LK" kind="relationship" relationship="viewControllers" id="p95-Yh-Nih"/>
                         <segue destination="RFH-ip-xMy" kind="relationship" relationship="viewControllers" id="LaP-be-bih"/>
-                        <segue destination="70m-GF-Ver" kind="relationship" relationship="viewControllers" id="nC0-Hf-J0O"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sr5-1p-BAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-8" y="498"/>
         </scene>
-        <!--Your Event-->
+        <!--My Events-->
         <scene sceneID="oVa-Xm-fEs">
             <objects>
-                <tableViewController id="qJG-Hj-fO1" sceneMemberID="viewController">
+                <tableViewController id="qJG-Hj-fO1" customClass="MyEventsViewController" customModule="Pik_Pak" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FvV-rI-YjN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0O5-eA-JpV">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="0O5-eA-JpV">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0O5-eA-JpV" id="PFX-ci-ibT">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7r-CJ-Sez">
+                                            <rect key="frame" x="8" y="11" width="398" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -239,18 +253,17 @@
                             <outlet property="delegate" destination="qJG-Hj-fO1" id="Lh0-X8-weZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Event" id="ale-ed-Q8o">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="RuJ-Yw-jeI">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="w5m-qQ-7r4">
-                                <rect key="frame" x="-23" y="-15" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                    <navigationItem key="navigationItem" title="My Events" id="ale-ed-Q8o">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="boG-BO-OiV">
+                            <connections>
+                                <action selector="AddEventButtonPress:" destination="qJG-Hj-fO1" id="qkf-b0-7tm"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="eventTableView" destination="FvV-rI-YjN" id="wFI-UG-Zyi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6O-9O-sMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C6Y-05-zit">
@@ -385,8 +398,8 @@
         <image name="Maps" width="25" height="25"/>
         <image name="News" width="25" height="25"/>
         <image name="News Selected" width="25" height="25"/>
+        <image name="thumps" width="160" height="213"/>
         <image name="thumpsdownBlack'" width="160" height="213"/>
-        <image name="thumpsdownred" width="160" height="213"/>
         <image name="thuumsblack" width="160" height="213"/>
     </resources>
 </document>

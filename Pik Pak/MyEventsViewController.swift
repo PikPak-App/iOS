@@ -9,10 +9,18 @@
 import UIKit
 
 class MyEventsViewController: UITableViewController, UIAlertViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet var eventTableView: UITableView!
     
     var event: Event = Event()
     let imagePicker = UIImagePickerController()
-    var userEvents: [NSDictionary] = [NSDictionary]()
+    var userEvents: [Event] = [Event]()
+    {
+        didSet
+        {
+            tableView.reloadData()
+        }
+    }
+    
     
     override internal func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +28,26 @@ class MyEventsViewController: UITableViewController, UIAlertViewDelegate, UIImag
             let events = eventsArray
         })*/
         
-        Events.shittyGetEventsOwnedByUser()
+        Events.getEventsOwnedByUser { (events) -> () in
+            self.userEvents = events
+        }
         imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
+        imagePicker.sourceType = .PhotoLibrary
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        println("View did appear")
+        //NSUserDefaults.standardUserDefaults().removeObjectForKey("currentEvent")
+        //NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     @IBAction func AddEventButtonPress(sender: AnyObject) {
+
         let alertController = UIAlertController(title: "Create a New Event", message: "Enter a name for the event. After, you will be prompted to take a picture to act as the cover photo for this event.", preferredStyle: .Alert)
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
             // ...
         }
         alertController.addAction(cancelAction)
-        
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
             let nameTextField = alertController.textFields![0] as! UITextField
             
@@ -43,14 +58,10 @@ class MyEventsViewController: UITableViewController, UIAlertViewDelegate, UIImag
             
         }
         alertController.addAction(OKAction)
-        
         alertController.addTextFieldWithConfigurationHandler { (textField) in
             textField.placeholder = "Event Name"
         }
-        
-        self.presentViewController(alertController, animated: true) {
-            // ...
-        }
+        self.presentViewController(alertController, animated: true) {}
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
@@ -66,13 +77,15 @@ class MyEventsViewController: UITableViewController, UIAlertViewDelegate, UIImag
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
+        var cell = eventTableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
         var titleLabel:UILabel = cell.viewWithTag(10) as! UILabel
-        titleLabel.text = userEvents[indexPath.row].objectForKey("name") as! String?
+        titleLabel.text = userEvents[indexPath.row].name as String
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        var selectedID = userEvents[indexPath.row].id
+        NSUserDefaults.standardUserDefaults().setObject(selectedID, forKey: "currentEvent")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
 }

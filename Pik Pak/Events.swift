@@ -16,11 +16,12 @@ class Events {
     static let rootRef = Firebase(url: "https://pikapic.firebaseio.com/")
     static let eventsRef = rootRef.childByAppendingPath("events")
     static let uuid = UIDevice.currentDevice().identifierForVendor.UUIDString
-
+    
     class func createEvent(event: Event) {
-        //var imageData: NSData = UIImagePNGRepresentation(event.cover)
+        var imageData: NSData = UIImageJPEGRepresentation(event.cover, 0.25)
+        var imageString: NSString = imageData.base64EncodedStringWithOptions(.allZeros)
         var eventRef = eventsRef.childByAutoId()
-        var eventDict = ["name": event.name, "location": ["lat":event.location.coordinate.latitude,"long":event.location.coordinate.longitude],"owner":uuid]
+        var eventDict = ["name": event.name, "location": ["lat":event.location.coordinate.latitude,"long":event.location.coordinate.longitude],"owner":uuid,"cover":imageString]
         eventRef.setValue(eventDict)
     }
     
@@ -41,12 +42,12 @@ class Events {
             println("id: " + event.id)
             event.location = CLLocation(latitude: lat, longitude: long)
             withBlock(event)
-        }, withCancelBlock: {error in
-            println(error.description)
+            }, withCancelBlock: {error in
+                println(error.description)
         })
     }
     
-    func relevantEventsForLocation(location: CLLocation, withBlock: ([Event]) -> ()) {
+    /*func relevantEventsForLocation(location: CLLocation, withBlock: ([Event]) -> ()) {
         let root = Firebase(url: "https://pikapic.firebaseio.com")
         let geoFire = GeoFire(firebaseRef: root)
         
@@ -72,7 +73,7 @@ class Events {
             withBlock(events)
             
         })
-    }
+    }*/
     
     class func picturesForEvent(eventID: String, withBlock:([Picture]) -> ()) {
         let pictureRef = rootRef.childByAppendingPath("pictures")
@@ -101,24 +102,70 @@ class Events {
         })
     }
     
-    class func getAllEvents(withBlock:[Event] -> ()) {
-        eventsRef.observeEventType(FEventType.ChildAdded, withBlock: { snapshot in
+    class func getAllEvents(withBlock:([Event]) -> ()) {
+        eventsRef.observeEventType(.Value, withBlock: { snapshot in
+            if(snapshot.value is NSNull)
+            {
+                return;
+            }
             var snapVal: NSDictionary = snapshot.value as! NSDictionary
             var events = [Event]()
-            snapVal.enumerateKeysAndObjectsUsingBlock({ (key
-                value, stop) -> Void in
-                var event = Event()
-                event.owner = uuid
-                event.name = snapVal["name"]
+            snapVal.enumerateKeysAndObjectsUsingBlock({ (key, value, stop) -> Void in //key is string of id and value is dict of values
+                var event:Event = Event()
+                event.id = key as! String
+                event.name = value["name"] as! String
+                event.owner = value["owner"] as! String
+                var base64 = value["cover"] as! String
+                let base64data: NSData! = NSData(base64EncodedString: base64, options: nil)
+                event.cover = UIImage(data: base64data)
+                //decode picture
                 
+                events.append(event)
             })
+            withBlock(events)
         })
     }
     
-    class func getEventsOwnedByUser(userID: String)
+    class func getEventsOwnedByUser(withBlock:([Event]) -> ())
     {
-        
+        eventsRef.queryOrderedByChild("owner").queryEqualToValue(uuid).observeEventType(.Value, withBlock: { snapshot in
+        if(snapshot.value is NSNull)
+        {
+            return;
+        }
+        var snapVal: NSDictionary = snapshot.value as! NSDictionary
+        var events = [Event]()
+        println(snapVal)
+            snapVal.enumerateKeysAndObjectsUsingBlock({ (key, value, stop) -> Void in //key is string of id and value is dict of values
+                var event:Event = Event()
+                event.id = key as! String
+                event.name = value["name"] as! String
+                event.owner = value["owner"] as! String
+                var base64 = value["cover"] as! String
+                let base64data: NSData! = NSData(base64EncodedString: base64, options: nil)
+                event.cover = UIImage(data: base64data)
+                //decode picture
+                
+            events.append(event)
+            })
+        withBlock(events)
+        })
     }
     
+    class func shittyGetEventsOwnedByUser() -> NSMutableArray
+    {
+        if(NSUserDefaults.standardUserDefaults().objectForKey("myEvents") == nil)
+        {
+            var events: NSMutableArray = NSMutableArray()
+            NSUserDefaults.standardUserDefaults().setObject(events, forKey: "myEvents")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            return events
+        }
+        else
+        {
+            var eventDicts: NSMutableArray = NSUserDefaults.standardUserDefaults().objectForKey("myEvents") as! NSMutableArray
+            return eventDicts
+        }
+    }
     
 }

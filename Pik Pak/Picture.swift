@@ -7,16 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 struct Picture {
     var id: String
     var score: Int
-    var image: UIImage!
+    var image: UIImage?
     
     init()
     {
         id = ""
         score = 0
-        image = nil
     }
 }

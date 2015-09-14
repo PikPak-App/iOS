@@ -18,6 +18,7 @@
 		49F166E11BA54CF0005CDC76 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166E01BA54CF0005CDC76 /* Events.swift */; };
 		49F166E41BA54CFA005CDC76 /* Pictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166E21BA54CFA005CDC76 /* Pictures.swift */; };
 		49F166E51BA54CFA005CDC76 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166E31BA54CFA005CDC76 /* Users.swift */; };
+		49F166ED1BA5B78D005CDC76 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F166EC1BA5B78D005CDC76 /* MyEventsViewController.swift */; };
 		DFB6363C25F42C34995103ED /* libPods-Pik Pak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */; };
 		EE2D26E71BA40A7E00DFEE92 /* InspirationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26E61BA40A7E00DFEE92 /* InspirationsViewController.swift */; };
 		EE2D26E91BA40AF700DFEE92 /* Inspiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D26E81BA40AF700DFEE92 /* Inspiration.swift */; };
@@ -60,6 +61,7 @@
 		49F166E01BA54CF0005CDC76 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		49F166E21BA54CFA005CDC76 /* Pictures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pictures.swift; sourceTree = "<group>"; };
 		49F166E31BA54CFA005CDC76 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		49F166EC1BA5B78D005CDC76 /* MyEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
 		52D63CFE0CFC0518284F924B /* libPods-Pik Pak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pik Pak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7396170F7123C9AD65D771A7 /* Pods-Pik Pak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pik Pak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pik Pak/Pods-Pik Pak.debug.xcconfig"; sourceTree = "<group>"; };
 		EE2D26E61BA40A7E00DFEE92 /* InspirationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationsViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				408115E61BA3ECB100F09294 /* AppDelegate.swift */,
 				408115E81BA3ECB100F09294 /* ViewController.swift */,
 				408115EA1BA3ECB100F09294 /* Main.storyboard */,
+				49F166EC1BA5B78D005CDC76 /* MyEventsViewController.swift */,
 				EE2D26E81BA40AF700DFEE92 /* Inspiration.swift */,
 				EE8E65551BA4A7E5004219CE /* CustomCell.swift */,
 				EE8E655D1BA52C0C004219CE /* Images.xcassets */,
@@ -262,6 +265,7 @@
 				TargetAttributes = {
 					408115E01BA3ECB100F09294 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = NJKXF7XV99;
 					};
 					408115F51BA3ECB100F09294 = {
 						CreatedOnToolsVersion = 6.4;
@@ -361,6 +365,7 @@
 				408115E91BA3ECB100F09294 /* ViewController.swift in Sources */,
 				49F166E11BA54CF0005CDC76 /* Events.swift in Sources */,
 				408115E71BA3ECB100F09294 /* AppDelegate.swift in Sources */,
+				49F166ED1BA5B78D005CDC76 /* MyEventsViewController.swift in Sources */,
 				EE2D26F71BA4126C00DFEE92 /* UltravisualLayout.swift in Sources */,
 				49F166DE1BA54CDA005CDC76 /* Picture.swift in Sources */,
 				EE2D26EB1BA40B2E00DFEE92 /* UIColor+Palette.swift in Sources */,
@@ -492,9 +497,13 @@
 			baseConfigurationReference = 7396170F7123C9AD65D771A7 /* Pods-Pik Pak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Pik Pak/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -503,9 +512,13 @@
 			baseConfigurationReference = 3C7C60AB528999CD87A12F4B /* Pods-Pik Pak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Pik Pak/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
