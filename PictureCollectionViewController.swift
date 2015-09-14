@@ -24,7 +24,7 @@ class PictureCollectionViewController: UICollectionViewController, UICollectionV
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        imagePicker.sourceType = .PhotoLibrary
+        imagePicker.sourceType = .Camera
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "receiveNotif:", name: "EventChangeNotif", object: nil)
         // Do any additional setup after loading the view.
     }

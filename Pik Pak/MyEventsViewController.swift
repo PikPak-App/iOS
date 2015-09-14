@@ -32,7 +32,7 @@ class MyEventsViewController: UITableViewController, UIAlertViewDelegate, UIImag
             self.userEvents = events
         }
         imagePicker.delegate = self
-        imagePicker.sourceType = .PhotoLibrary
+        imagePicker.sourceType = .Camera
     }
     
     override func viewDidAppear(animated: Bool) {
