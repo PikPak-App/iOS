@@ -36,17 +36,6 @@
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.53000000000000003" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRb-7c-xk6">
-                                            <rect key="frame" x="1" y="8" width="197" height="184"/>
-                                            <animations/>
-                                            <state key="normal">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" red="0.13333334028720856" green="0.058823533356189728" blue="0.031372550874948502" alpha="1" colorSpace="deviceRGB"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="Fem-cp-AVX" kind="push" identifier="pushToPictureCollection" id="0DU-qT-t1J"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjN-xt-zOn">
                                             <rect key="frame" x="8" y="76" width="192" height="48"/>
                                             <animations/>
@@ -121,6 +110,7 @@
                         <outlet property="CollectionView" destination="UD7-gg-Cbk" id="i4s-eI-fcY"/>
                         <outlet property="collectionView" destination="UD7-gg-Cbk" id="qXd-dA-bcU"/>
                         <outlet property="navBar" destination="Jyo-eX-WRU" id="EFn-93-blY"/>
+                        <segue destination="Fem-cp-AVX" kind="push" identifier="pushToPictureCollection" id="54n-s7-PzX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MK-x1-zaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
